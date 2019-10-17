@@ -1,0 +1,28 @@
+{
+  "configs": [
+    "global-config.xml",
+    "api-cors-testing.xml"
+  ],
+  "secureProperties": [],
+  "redeploymentEnabled": true,
+  "name": "com.mule.services.cors:api-cors-testing:1.0.0",
+  "minMuleVersion": "4.2.1",
+  "requiredProduct": "MULE",
+  "classLoaderModelLoaderDescriptor": {
+    "id": "mule",
+    "attributes": {
+      "exportedPackages": [],
+      "exportedResources": [
+        "log4j2.xml",
+        "global-config.xml",
+        "api-cors-testing.xml",
+        "config.yaml",
+        "docroot/corsTesting.html"
+      ]
+    }
+  },
+  "bundleDescriptorLoader": {
+    "id": "mule",
+    "attributes": {}
+  }
+}

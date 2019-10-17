@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta http-equiv="Content-Style-Type" content="text/css">
+   <style type="text/css">
+            /* http://meyerweb.com/eric/tools/css/reset/
+               v2.0 | 20110126
+               License: none (public domain)
+            */
+            html, body, div, span, applet, object, iframe,
+            h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+            a, abbr, acronym, address, big, cite, code,
+            del, dfn, em, img, ins, kbd, q, s, samp,
+            small, strike, strong, sub, sup, tt, var,
+            b, u, i, center,
+            dl, dt, dd, ol, ul, li,
+            fieldset, form, label, legend,
+            table, caption, tbody, tfoot, thead, tr, th, td,
+            article, aside, canvas, details, embed,
+            figure, figcaption, footer, header, hgroup,
+            menu, nav, output, ruby, section, summary,
+            time, mark, audio, video {
+                margin: 0;
+                padding: 0;
+                border: 0;
+                font-size: 100%;
+                font: inherit;
+                vertical-align: baseline;
+            }
+            /* HTML5 display-role reset for older browsers */
+            article, aside, details, figcaption, figure,
+            footer, header, hgroup, menu, nav, section {
+                display: block;
+            }
+            body {
+                line-height: 1;
+                font-family: OpenSans,sans-serif;
+            }
+            ol, ul {
+                list-style: none;
+            }
+            blockquote, q {
+                quotes: none;
+            }
+            blockquote:before, blockquote:after,
+            q:before, q:after {
+                content: '';
+                content: none;
+            }
+            table {
+                border-collapse: collapse;
+                border-spacing: 0;
+            }
+            .content {
+                margin: 0 auto;
+                width: 1000px;
+                background-repeat: no-repeat;
+                background-position: 932px 12px;
+                background-image: url(data:image/png;base64,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);
+            }
+            .content .header {
+                padding-top: 20px;
+                padding-bottom: 30px;
+            }
+            .content .header h1 {
+                font-weight: bold;
+                font-size: 2em;
+            }
+            input:disabled {
+                background-color: #ccc;
+                color: #ccc;
+            }
+            #operation {
+                width: 150px;
+            }
+            #ip {
+                width: 150px;
+            }
+            #port {
+                width: 50px;
+            }
+            #check {
+                background-color: #6a8998;
+                color: #f8f9fa;
+                border: none;
+                border-radius: 2px;
+            }
+            #clean {
+                float: right;
+                background-color: #6a8998;
+                color: #f8f9fa;
+                border: none;
+                border-radius: 2px;
+            }
+            .helpBox {
+                margin-top: 10px;
+                margin-bottom: 10px;
+            }
+            #output {
+                min-height: 100px;
+                background-color: #F2F2F2;
+                margin-top: 6px;
+                border: 1px solid #00A0DF;
+                font-family: monospace;
+            }
+            #output .command {
+                color: #00607C;
+                margin-top: 10px;
+                margin-bottom: 10px;
+                width:30px;
+            }
+            #output pre.output {
+                color: #414042;
+                margin-left: 1%;
+                width: 96%;
+            }
+            #output textarea.output {
+                color: #414042;
+                margin-left: 1%;
+                width: 100%;
+                background-color: #00000000;
+                border: solid 1px #999;
+                overflow-x: scroll;
+                overflow-y: auto;
+                height: 300px;
+            }
+             #url{
+               margin-left: 1%;
+               width: 60%;
+            }
+             #body-content {
+                    color: #414042;
+                    margin-left: 1%;
+                    width: 100%;
+                    background-color: #F2F2F2;
+                    border: solid 1px #999;
+                    overflow-x: scroll;
+                    overflow-y: auto;
+                    height: 300px;
+                    border: 1px solid #00A0DF;
+             }
+              .warn {
+                    border-color: red;
+             }
+        </style>
+        <title>CORS Testing tool</title>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+</head>
+
+<script type="text/javascript">
+    
+var i = 0;
+
+function increment() {
+  i += 1;
+}
+
+function addfieldFunction() {
+  var r = document.createElement('div');
+  var y = document.createElement("INPUT");
+  var z = document.createElement("INPUT");
+  y.setAttribute("class", "dash-input");
+  y.setAttribute("type", "text");
+  y.setAttribute("placeholder", "Key");
+  z.setAttribute("class", "dash-input");
+  z.setAttribute("type", "text");
+  z.setAttribute("placeholder", "Value");
+  increment();
+  y.setAttribute("id", "a_level["+i+"][0]"); //Keep attribute in lower case
+  r.appendChild(y);
+  z.setAttribute("id", "a_level["+i+"][1]");
+  r.appendChild(z);
+  document.getElementById("form-div").appendChild(r);
+}   
+    
+console.log("starting ajax request to the resource.");
+       
+ 
+       
+function UserAction() {
+  var headers = {} 
+  var length =  $("input.dash-input:text").length / 2
+  $("input.dash-input:text").each(function(input){
+        var value = $('input[id="a_level['+input+'][0]"]').val();
+        var id = $('input[id="a_level['+input+'][1]"]').val();
+        if (typeof value !== "undefined" && typeof id !== "undefined" ) {
+                headers[value] =id
+            }
+        });
+  var settings = {
+  "async": true,
+  "url": $('#url').val(),
+  "method": $('#method').val(),
+  "headers": headers
+}
+  
+$.ajax(settings).done(function (response, status, xhr) {
+    
+     var ct = xhr.getResponseHeader("content-type") || "";
+       if (ct.indexOf('json') > -1) {
+        console.log(JSON.stringify(response));
+        $("#output").append('<pre class="command">&gt; ' + JSON.stringify(response, null, 2) + ' for calling ' + $('#url').val() + '</pre>');
+       }
+}).fail(function() {
+    $("#output").append('<pre class="command">&gt; Couldnt complete request, please check browser console logs --- Error during invocation </pre>');
+   })
+ .always(function() { $("#check").attr("disabled", false); });
+ 
+}
+
+ $(document).ready(function() {
+               
+    $("#check").click(function() {
+     UserAction();
+     $("#output").append('<pre class="command">&gt; ' +'Calling ' + $('#method').val() +  ' method & ---  <br/>' + $('#url').val() +' url'+ '</pre>');
+
+ });
+$("#clean").click(function() {
+        $("#output").empty();
+        $( "#form-div" ).empty();
+         });
+$(".method").change(function(e) {
+                    var operation = e.target.value;
+                    switch (operation) {
+                      case "post":
+                        $("#content").show();
+                        break;
+                      case "put":
+                        $("#content").show();
+                        break;
+                      case "patch":
+                        $("#content").show();
+                        break;
+                      case "delete":
+                        $("#content").show();
+                        break;
+                    default:
+                        $("#content").hide();
+                        break;
+                    }
+            });    
+});
+</script>
+ 
+<body>
+     <div class="content">
+			<div class="header"><h1>CORS Testing Tool</h1></div>
+     <div>
+    <div class="helpBox">To view test result. Right click this page > Inspect Element > Console</div>
+    <p id="out"></p>
+<form onsubmit="return false" action="#" class="dash-form">
+<div> 
+      <h3>API Method: <select name="method" class="method" id="method">
+                    <option value="get" selected>GET</option>
+                    <option value="post">POST</option>
+                    <option value="put">PUT</option>
+                    <option value="options">OPTIONS</option>
+                    <option value="head">HEAD</option>
+                    <option value="delete">DELETE</option>
+                    <option value="patch">PATCH</option>
+    </select>
+  <br/><br/>
+ API URL <input type="text" id="url" placeholder="API URL"></h3>
+  <br/>
+  <h3>API Headers <button class="dash-add-button" onclick="addfieldFunction()"> + Add a Header</button></h3>
+  <div id="form-div">
+  </div>
+  <div class="dash-add">
+  </div>
+    <br/>
+    <dev class="helpBox" id="content" style="display: none;"><p>Insert Body Content:</p>  <br/>
+    <textarea class="helpBox" id="body-content"></textarea>
+    </dev>
+  
+
+<button type="submit" id="check" >Test CORS</button>
+<pre id="output"></pre>
+<button type="button" id="clean">Clean Console</button> 
+</div>
+    
+</form>
+
+      
+</body>
+</html>

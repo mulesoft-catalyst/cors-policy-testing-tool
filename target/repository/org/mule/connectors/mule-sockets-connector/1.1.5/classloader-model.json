@@ -1,0 +1,21 @@
+{
+  "version": "1.1.0",
+  "artifactCoordinates": {
+    "groupId": "org.mule.connectors",
+    "artifactId": "mule-sockets-connector",
+    "version": "1.1.5",
+    "type": "jar",
+    "classifier": "mule-plugin"
+  },
+  "dependencies": [
+    {
+      "artifactCoordinates": {
+        "groupId": "commons-io",
+        "artifactId": "commons-io",
+        "version": "2.6",
+        "type": "jar"
+      },
+      "uri": "repository/commons-io/commons-io/2.6/commons-io-2.6.jar"
+    }
+  ]
+}

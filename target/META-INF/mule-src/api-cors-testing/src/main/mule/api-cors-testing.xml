@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<mule xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns="http://www.mulesoft.org/schema/mule/core"
+	xmlns:doc="http://www.mulesoft.org/schema/mule/documentation"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
+http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd">
+	<flow name="api-cors-testingFlow" doc:id="1a733a43-eec8-4500-a1cd-b49bf97a1361" >
+		<http:listener doc:name="Listener" doc:id="e5710451-7c33-4c09-99d6-d7021f3634d5" config-ref="HTTP_Listener_config" path="${http.listener.path}">
+			<http:response >
+				<http:headers ><![CDATA[#[output application/java
+---
+{
+	"content-type" : "text/html"
+}]]]></http:headers>
+			</http:response>
+		</http:listener>
+		<logger level="INFO" doc:name="Logger" doc:id="feb6a4c0-af58-4ba9-96ca-26612ac1668a" message="#['Request received by client to CORS testing service']" category="com.mulesoft.services.serverinfo" />
+		<http:load-static-resource doc:name="Load static resource" doc:id="43751c76-6239-4a93-85a8-c86dea50e727" defaultFile="corsTesting.html" resourceBasePath="${app.home}/docroot"/>
+	</flow>
+
+</mule>
