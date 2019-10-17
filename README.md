@@ -15,3 +15,4 @@ Make sure to add the http://{app-name}.cloudhub.io to the CORS policy fronting y
 One you deploy the APP to Cloudhub. hit the following URL http://{app-name}.cloudhub.io/cors
 
 Please give a feedback and ways to improve or add required features.
+For feedback please feel free to email me aheidar@mulesoft.com or comment below. 
