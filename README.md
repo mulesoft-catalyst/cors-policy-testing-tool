@@ -19,4 +19,4 @@ For feedback please feel free to email me aheidar@mulesoft.com or comment below.
 
 when you hit http://{app-name}.cloudhub.io you should see the follwoing: 
 
-![image](https://wiki.corp.mulesoft.com/download/attachments/77729318/corsss.png?version=1&modificationDate=1571693840909&api=v2)
+![image](https://github.com/mulesoft-catalyst/cors-policy-testing-tool/blob/master/corsss.png)
