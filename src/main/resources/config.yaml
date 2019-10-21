@@ -1,2 +1,2 @@
-http.listener.path: "cors"
+http.listener.path: ""
 http.port: "8081"
